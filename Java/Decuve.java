@@ -26,28 +26,19 @@ public class Decuve {
 		if(homme == false) {
 			alcool = (dose*10)/(poid*0.6);
 		}
-		
 		System.out.println("Vous avez " + alcool + "g/L d'alcool dans le sang");
 		
 		if(alcool >= 0.5) {
 			System.out.println("Vous ne pouvez pas prendre le volant !");
 			
-			if(homme == true) {
-				decuve = 0.085;
-			}
-			if(homme == false) {
-				decuve = 0.1;
-			}
+			if(homme == true) {decuve = 0.085;}
+			else {decuve = 0.1;}
 			
 			while(alcool >= 0.5) {
-				
 				alcool = alcool-decuve;
 				heure++;
-				
 			}
-			
 			System.out.println("Vous pouvez reprendre le volant dans " + heure + "h");
-		
 		}
 	}
 }
