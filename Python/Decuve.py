@@ -21,6 +21,7 @@ def main():
 
     print("Vous avez " + str(alcool) + "g/L d'alcool dans le sang")
 
+    #Si le taux d'alcool est su^p à 0.5 qui est la limite autorisée
     if alcool >= 0.5:
 
         print("Vous ne pouvez pas prendre le volant !")
@@ -33,6 +34,7 @@ def main():
 
         while alcool >= 0.5:
 
+            #Décuve chaque heure différent selon le genre
             alcool = alcool-decuve
             heure = heure+1
 
