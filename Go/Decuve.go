@@ -4,6 +4,6 @@ import (
 	"fmt"
 )
 
-func main() {
-	fmt.println("Start")
+func main(){
+	println("Start")
 }
