@@ -12,12 +12,12 @@ def main():
     if homme == True:
 
         #taux d'alcool sans décuve
-        alcool = (dose * 10) / (poid * 0.7);
+        alcool = (dose * 10) / (poid * 0.7)
 
     if homme == False:
 
         #taux d'alcool sans décuve
-        alcool = (dose * 10) / (poid * 0.6);
+        alcool = (dose * 10) / (poid * 0.6)
 
     print("Vous avez " + str(alcool) + "g/L d'alcool dans le sang")
 
