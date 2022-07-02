@@ -8,16 +8,18 @@ import (
 
 func main() {
 
-	var homme bool
-	var poid int
-	var dose int 
-	var float int
+	var homme bool = false
+	var poid float64
+	var dose float64
+	var alcool float64
+	var heure float64 = 0
+	var decuve float64
 	
-	fmt.Println("Etes vous un homme ? (true/false)\n")
+	fmt.Println("Etes vous un homme ? (true/false)")
     fmt.Scan(&homme)
-    fmt.Println("Quel est votre poid ? (kg)\n")
+    fmt.Println("Quel est votre poid ? (kg)")
     fmt.Scan(&poid)
-    fmt.Println("Combien de verre avez vous bu ? (dose bar)\n")
+    fmt.Println("Combien de verre avez vous bu ? (dose bar)")
 	fmt.Scan(&dose)
 
     if homme == true {
@@ -42,13 +44,14 @@ func main() {
 		for true {
 			if alcool >= 0.5 {
 				alcool = alcool-decuve
+				heure++
 				continue
 			} else {
 				break
 			}
 		}
 
-        fmt.Println("Vous pouvez reprendre le volant dans " + heure + "h")
+        fmt.Println("Vous pouvez reprendre le volant dans", heure, "heures")
 
 	} else {
 
