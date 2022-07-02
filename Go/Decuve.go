@@ -3,17 +3,15 @@ package main
 import (
 	"fmt"
 )
-
-
-
+var(
+	homme bool = false
+	poid float64
+	dose float64
+	alcool float64
+	heure float64 = 0
+	decuve float64
+)
 func main() {
-
-	var homme bool = false
-	var poid float64
-	var dose float64
-	var alcool float64
-	var heure float64 = 0
-	var decuve float64
 	
 	fmt.Println("Etes vous un homme ? (true/false)")
     fmt.Scan(&homme)
