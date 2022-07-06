@@ -41,9 +41,7 @@ def main():
         print("Vous pouvez reprendre le volant dans " + str(heure) + "h")
 
     else:
-
         print("Vous pouvez prendre le volant.")
 
 if __name__ == '__main__':
-
     main()

@@ -34,10 +34,7 @@ public class Decuve {
 			if(homme == true) {decuve = 0.085;}
 			else {decuve = 0.1;}
 			
-			while(alcool >= 0.5) {
-				alcool = alcool-decuve;
-				heure++;
-			}
+			while(alcool >= 0.5) {alcool = alcool-decuve;heure++;}
 			System.out.println("Vous pouvez reprendre le volant dans " + heure + "h");
 		}
 	}
