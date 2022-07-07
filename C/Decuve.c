@@ -6,7 +6,7 @@ static int dose;
 static int heure = 0;
 static double decuve;
 static double alcool;
-static boolean homme;
+static bool homme;
 
 void main() {
 
@@ -16,8 +16,26 @@ void main() {
 
     if(homme==true){
         alcool = (dose*10)/(poid*0.7);
-        printf(alcool);
     }
+    if(homme==false) {
+        alcool = (dose*10)/(poid*0.6);
+    }
+    printf("Vous avez", alcool, "g/L d'alcool dans le sang");
 
+    if(alcool >= 0.5) {
+        printf("Vous ne pouvez pas prendre le volant !")
 
+        if(homme == true) {
+            decuve = 0.085;
+        }
+        else {
+            decuve = 0.1;
+        }
+        while(alcool >= 0.5) {
+            alcool = alcool-decuve;
+            heure++;
+        }
+        printf("Vous pouvez reprendre le volant dans ", heure, "h");
+
+    }
 }
