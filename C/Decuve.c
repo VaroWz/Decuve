@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 static int poid;
 static int dose;
 static int heure = 0;
