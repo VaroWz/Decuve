@@ -7,11 +7,14 @@ static char homme;
 
 void main() {
 
+    printf("Lancement du programme... En C");
+
+    //Sans boolean je peux vérifier par un char
     scanf("Etes vous un homme ? (true/false)", &homme);
     scanf("Quel est votre poid ? (kg)", &poid);
     scanf("Combien de verre avez vous bu ? (dose bar)", &dose);
 
-    if(homme=="true"){
+    if(homme=="true") {
         alcool = (dose*10)/(poid*0.7);
     }
     if(homme=="false") {
@@ -32,7 +35,6 @@ void main() {
             alcool = alcool-decuve;
             heure++;
         }
-        printf("Vous pouvez reprendre le volant dans ", heure, "h");
-
+        printf("Vous pouvez reprendre le volant dans " + heure, "h");
     }
 }
