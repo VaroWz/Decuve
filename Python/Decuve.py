@@ -1,5 +1,3 @@
-heure = 0
-
 def main():
 
     #Demande du genre
@@ -25,7 +23,7 @@ def main():
     if alcool >= 0.5:
 
         print("Vous ne pouvez pas prendre le volant !")
-
+        heure = 0
         if homme == True:
             decuve = 0.085
 
