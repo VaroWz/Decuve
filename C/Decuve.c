@@ -1,3 +1,7 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
 static int poid;
 static int dose;
 static int heure = 0;
@@ -7,17 +11,17 @@ static char homme;
 
 void main() {
 
-    printf("Lancement du programme... En C");
+    //printf("Lancement du programme... En C");
 
     //Sans boolean je peux vérifier par un char
     scanf("Etes vous un homme ? (true/false)", &homme);
     scanf("Quel est votre poid ? (kg)", &poid);
     scanf("Combien de verre avez vous bu ? (dose bar)", &dose);
 
-    if(homme=="true") {
+    if(homme==1) {
         alcool = (dose*10)/(poid*0.7);
     }
-    if(homme=="false") {
+    if(homme==1) {
         alcool = (dose*10)/(poid*0.6);
     }
     printf("Vous avez", alcool, "g/L d'alcool dans le sang");
@@ -25,7 +29,7 @@ void main() {
     if(alcool >= 0.5) {
         printf("Vous ne pouvez pas prendre le volant !");
 
-        if(homme == "true") {
+        if(homme == 1) {
             decuve = 0.085;
         }
         else {
