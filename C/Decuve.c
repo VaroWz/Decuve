@@ -1,6 +1,4 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 
 static int poid;
 static int dose;
@@ -9,14 +7,17 @@ static double decuve;
 static double alcool;
 static char homme;
 
-void main() {
+int main() {
 
     //printf("Lancement du programme... En C");
 
     //Sans boolean je peux vérifier par un char
-    scanf("Etes vous un homme ? (true/false)", &homme);
-    scanf("Quel est votre poid ? (kg)", &poid);
-    scanf("Combien de verre avez vous bu ? (dose bar)", &dose);
+    printf("Etes vous un homme ? (true/false)\n");
+    scanf("%c", &homme);
+    printf("Quel est votre poid ? (kg)\n");
+    scanf("%i", &poid);
+    printf("Combien de verre avez vous bu ? (dose bar)\n");
+    scanf("%i", &dose);
 
     if(homme==1) {
         alcool = (dose*10)/(poid*0.7);
@@ -39,6 +40,6 @@ void main() {
             alcool = alcool-decuve;
             heure++;
         }
-        printf("Vous pouvez reprendre le volant dans " + heure, "h");
+        printf("Vous pouvez reprendre le volant dans ", heure, "h");
     }
 }
